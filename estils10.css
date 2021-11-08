@@ -1,0 +1,1332 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: rgb(236, 236, 236);
+    
+    color: #000;
+    font-family: 'Noto Serif Display', serif;
+}
+
+/*estructura general de tota la web definida a partir de grid*/
+.contenedor {
+    width: 100%;
+    max-width: 100%;
+   /* margin: 20px auto;*/
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 6rem 0.5fr 3fr 200px;
+
+    grid-template-areas: "header        header      header      header      header      header      header"
+                         "portada       portada     portada     portada     portada     portada     portada"
+                         "estructura    estructura  estructura  estructura  estructura  estructura  estructura"
+                         "footer        footer      footer      footer      footer      footer      footer";
+}
+
+.contenedor > div,
+.contenedor .header{
+        background: #fff;
+        padding: 20px;
+}
+
+.logo-header img {
+    width: 4.5rem;
+    margin-left: 2rem;
+}
+
+.contenedor .header {
+    width: 100%;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );    /*per fer efecte cristall*/
+    color: rgb(36, 36, 36);
+    margin-top: 0%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    position: fixed;
+    z-index: 100;
+}
+
+.nav-menu ul{
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu li{
+    margin-right: 6.5rem;
+    color: rgb(24, 24, 24);
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
+.nav-menu a:hover {
+    color: rgb(131, 15, 15);
+}
+
+
+.contenedor .portada {
+    grid-area: portada;
+    background: rgb(236, 236, 236);
+    color:#fff;
+}
+
+/*definició de l'estructura del contingut de la web a partir de grid.*/
+.contenedor .estructura {
+    grid-area: estructura;
+    background: rgb(236, 236, 236);
+    color: rgb(39, 37, 37);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: "lucero        lucero      lucero      lucero      lucero      lucero      lucero"
+                         "martina       martina     martina     martina     martina     martina     martina"
+                         "megan         megan       megan       megan       megan       megan       megan"
+                         "prin          prin        prin        prin        prin        prin        prin";
+
+}
+
+/*lo que hi ha dins el div portada, posicionament de les imatges*/
+.contenedor .portada {
+    position: relative; 
+    width: 90%;
+    margin: 0px auto;
+    display: grid;
+    /*grid-gap: 0fr;*/
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+}
+
+
+.contenedor .portada .imatge1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.contenedor .portada .imatge1 .lucero1{
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor .portada .imatge2{
+    grid-column: 3 / 5;
+    grid-row: -1 / -2;
+}
+
+.contenedor .portada .imatge2 .martina1{
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor .portada .imatge3{
+    grid-column: 5 / 7;
+    grid-row: 1 / 2;
+}
+
+.contenedor .portada .imatge3 .megan1{
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor .portada .imatge4{
+    grid-column: 7 / 9;
+    grid-row: -1 / -2;
+}
+
+.contenedor .portada .imatge4 .prin1{
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor .portada .titol {
+    position: absolute;
+    padding: inherit;
+    border: inherit;
+    grid-column: 7 / -1;
+    text-align: right;
+    vertical-align: middle;
+    justify-content:center; 
+    font-size: 16px;
+    font-size: 1.7em;
+    font-weight: bold;
+    max-width: 100%;
+    color: rgb(29, 29, 29);
+}
+
+
+
+/*a partir d'aquí és l'estructura de cada apartat del contingut de la web*/
+
+/*1a fotògrafa*/
+
+.contenedor .estructura .lucero{
+    position: relative;
+    grid-area: lucero;
+    grid-row: 1 / 2;
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: "aire          aire        aire        aire          aire          aire       aire"
+                         "nom           nom         nom         exemple1      exemple1      aire2      aire2"
+                         "imatge_a      imatge_a    imatge_a    exemple1      exemple1      exemple2   exemple2"
+                         "imatge_a      imatge_a    imatge_a    exemple1      exemple1      exemple2   exemple2"
+                         "imatge_a      imatge_a    imatge_a    aire1         aire1         exemple2   exemple2";
+}
+
+
+.contenedor > div{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+/*
+.contenedor .estructura .aire {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background: #ffdbfa;
+}*/
+
+.contenedor .estructura .nom {
+grid-column: 1 / 4;
+grid-row: 2 / 3;
+/*color:rgb(39, 37, 37);*/
+color: rgb(90, 44, 0);
+text-align: center;
+font-size: 2.5em;
+padding-top: 8%;
+/*min-height: 150px;*/
+}
+
+.contenedor .estructura .contingut-1 {
+grid-area: imatge_a;
+grid-column: 1 / 4;
+grid-row: 3 / 6;
+color:rgb(39, 37, 37);
+}
+
+
+.contenedor .estructura .contingut-1 .imatge_a img{
+    grid-area: imatge_a;
+    grid-column: span 3;
+    max-width: 100%;
+
+}
+
+/*estils per fer que al passar el cursor per damunt la imatge aparegui el text*/
+.contenedor .estructura .contingut-1 figure {
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedor .estructura .contingut-1 figure .capa {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 36, 36 ,0.7);
+    color: rgb(236, 218, 193);
+    opacity: 0;
+    visibility: hidden;
+    text-align: left;
+    padding: 4%;
+}
+
+.contenedor .estructura .contingut-1 figure .capa p{
+    width: 90%;
+    padding-top: 5%;
+}
+
+
+.contenedor .estructura .contingut-1 figure:hover > .capa {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*a partir d'aquí definició de la posició i estructura de les imatges*/
+.contenedor .estructura .exemple1 {
+grid-column: 4 / 6;
+grid-row: 2 / 5;
+}
+
+.contenedor .estructura .exemple1 .widget-1 img{
+    grid-area: exemple1;
+    grid-column: span 2;
+    max-width: 100%;
+    height: auto;
+    }
+
+ 
+    
+.contenedor .estructura .exemple2 {
+grid-column: 6 / -1;
+grid-row: 3 / 6;
+}
+
+.contenedor .estructura .exemple2 .widget-2 img{
+    grid-area: exemple2;
+    grid-column: span 2;
+    width: 100%;
+    height: auto;
+    }
+
+
+
+
+
+/*2a fotògrafa*/
+
+ 
+   .contenedor .estructura .martina{
+    position: relative;
+    grid-area: martina;
+    grid-row: 2 / 3;
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+
+    grid-template-areas: "aire3         aire3       aire3       aire3         aire3         aire3      aire3"
+                         "nom2          nom2        nom2        exemple3      exemple3      aire5      aire5"
+                         "imatge_b      imatge_b    imatge_b    exemple3      exemple3      exemple4   exemple4"
+                         "imatge_b      imatge_b    imatge_b    exemple3      exemple3      exemple4   exemple4"
+                         "imatge_b      imatge_b    imatge_b    aire4         aire4         exemple4   exemple4";
+}
+
+
+.contenedor > div{
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}  
+   /*
+.contenedor .estructura .aire3 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    background: #ffdbfa;
+}*/
+
+.contenedor .estructura .nom2 {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    /*color:rgb(39, 37, 37);*/
+    color: rgb(255, 78, 181);
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 8%;
+    
+}   
+    
+.contenedor .estructura .contingut-2 {
+    grid-area: imatge_b;
+    grid-column: 1 / 4;
+    grid-row: 3 / 6;
+    color:rgb(39, 37, 37);
+    
+}    
+
+.contenedor .estructura .contingut-2 .imatge_b img{
+    grid-area: imatge_b;
+    grid-column: span 3;
+    max-width: 100%;
+    /*border: 10%;*/
+}
+
+.contenedor .estructura .contingut-2 figure {
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedor .estructura .contingut-2 figure .capa2 {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 36, 36 ,0.7);
+    color: rgb(236, 218, 193);
+    opacity: 0;
+    visibility: hidden;
+    text-align: left;
+    padding: 4%;
+}
+
+.contenedor .estructura .contingut-2 figure .capa2 p{
+    width: 90%;
+    padding-top: 5%;
+}
+
+
+.contenedor .estructura .contingut-2 figure:hover > .capa2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+    
+.contenedor .estructura .exemple3 {
+    grid-column: 4 / 6;
+    grid-row: 2 / 5;
+}   
+
+.contenedor .estructura .exemple3 .widget-3 img{
+    grid-area: exemple3;
+    grid-column: span 3;
+    max-width: 100%;
+    /*border: 10%;*/
+}
+
+
+.contenedor .estructura .exemple4 {
+    grid-column: 6 / -1;
+    grid-row: 3 / 6;
+    
+}
+
+.contenedor .estructura .exemple4 .widget-4 img{
+    grid-area: exemple4;
+    grid-column: span 3;
+    max-width: 100%;
+    /*border: 10%;*/
+}
+
+
+
+/*3a fotògrafa*/
+
+       
+    .contenedor .estructura .megan{
+        position: relative;
+        grid-area: megan;
+        grid-row: 3 / 4;
+        width: 90%;
+        margin: 20px auto;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+
+        grid-template-areas: "aire6         aire6       aire6       aire6         aire6         aire6      aire6"
+                             "nom3          nom3        nom3        exemple5      exemple5      aire8      aire8"
+                             "imatge_c      imatge_c    imatge_c    exemple5      exemple5      exemple6   exemple6"
+                             "imatge_c      imatge_c    imatge_c    exemple5      exemple5      exemple6   exemple6"
+                             "imatge_c      imatge_c    imatge_c    aire7         aire7         exemple6   exemple6";
+
+    }
+    
+    
+    .contenedor > div{
+        background: #fff;
+        padding: 20px;
+        border-radius: 4px;
+    }
+/*
+    .contenedor .estructura .aire6 {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        background: #ffdbfa;
+    }  */
+    
+    .contenedor .estructura .nom3 {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        /*color:rgb(39, 37, 37);*/
+        color: rgb(62, 151, 2);
+        text-align: center;
+        font-size: 2.5em;
+        padding-top: 8%;
+    }   
+        
+    .contenedor .estructura .contingut-3 {
+        grid-area: imatge_c;
+        grid-column: 1 / 4;
+        grid-row: 3 / 6;
+        color:rgb(39, 37, 37);
+        
+    }    
+
+    
+
+    .contenedor .estructura .contingut-3 .imatge_c img{
+        grid-area: imatge_c;
+        grid-column: span 3;
+        max-width: 100%;
+       /* border: 10%;*/
+    }
+        
+    .contenedor .estructura .contingut-3 figure {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .contenedor .estructura .contingut-3 figure .capa3 {
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background: rgba(36, 36, 36 ,0.7);
+        color: rgb(236, 218, 193);
+        opacity: 0;
+        visibility: hidden;
+        text-align: left;
+        padding: 4%;
+    }
+    
+    .contenedor .estructura .contingut-3 figure .capa3 p{
+        width: 90%;
+        padding-top: 5%;
+    }
+    
+    
+    .contenedor .estructura .contingut-3 figure:hover > .capa3 {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+
+    .contenedor .estructura .exemple5 {
+        grid-column: 4 / 6;
+        grid-row: 2 / 5;
+    }   
+
+    .contenedor .estructura .exemple5 .widget-5 img{
+        grid-area: widget-5;
+        grid-column: span 2;
+        max-width: 100%;
+        height: auto;
+        }
+
+
+    
+
+    .contenedor .estructura .exemple6 {
+        grid-column: 6 / -1;
+        grid-row: 3 / 6;
+        
+    }
+
+    .contenedor .estructura .exemple6 .widget-6 img{
+        grid-area: widget-6;
+        grid-column: span 2;
+        max-width: 100%;
+        height: auto;
+        }
+
+
+
+    /*4a fotògrafa*/
+
+     
+       .contenedor .estructura .prin{
+        position: relative;
+        grid-area: prin;
+        grid-row: 4 / 5;
+        width: 90%;
+        margin: 20px auto;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+
+        grid-template-areas: "aire9         aire9       aire9       aire9         aire9         aire9      aire9"
+                             "nom4          nom4        nom4        exemple7      exemple7      aire11     aire11"
+                             "imatge_d      imatge_d    imatge_d    exemple7      exemple7      exemple8   exemple8"
+                             "imatge_d      imatge_d    imatge_d    exemple7      exemple7      exemple8   exemple8"
+                             "imatge_d      imatge_d    imatge_d    aire10        aire10        exemple8   exemple8";
+    }
+    
+    
+    .contenedor > div{
+        background: #fff;
+        padding: 20px;
+        border-radius: 4px;
+    }       
+
+    .contenedor .estructura .nom4 {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        /*color:rgb(39, 37, 37);*/
+        color: rgb(25, 0, 116);
+        text-align: center;
+        font-size: 2.5em;
+        padding-top: 8%;
+        
+    }   
+/*
+    .contenedor .estructura .aire9 {
+        grid-column: 1 / -1;
+        grid-row: 1 / 2;
+        background: #ffdbfa;
+    }
+        */
+    .contenedor .estructura .contingut-4 {
+        grid-area: imatge_d;
+        grid-column: 1 / 4;
+        grid-row: 3 / 6;
+        color:rgb(39, 37, 37);
+        
+    }    
+        
+    .contenedor .estructura .contingut-4 .imatge_d img{
+        grid-area: imatge_d;
+        grid-column: span 3;
+        max-width: 100%;
+       /* border: 10%;*/
+    }
+
+    .contenedor .estructura .contingut-4 figure {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .contenedor .estructura .contingut-4 figure .capa4 {
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        background: rgba(36, 36, 36 ,0.7);
+        color: rgb(236, 218, 193);
+        opacity: 0;
+        visibility: hidden;
+        text-align: left;
+        padding: 4%;
+    }
+    
+    .contenedor .estructura .contingut-4 figure .capa4 p{
+        width: 90%;
+        padding-top: 5%;
+    }
+    
+    
+    .contenedor .estructura .contingut-4 figure:hover > .capa4 {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+
+    .contenedor .estructura .exemple7 {
+        grid-column: 4 / 6;
+        grid-row: 2 / 5;   
+    }   
+
+    .contenedor .estructura .exemple7 .widget-7 img{
+        grid-area: exemple7;
+        grid-column: span 2;
+        max-width: 100%;
+        height: auto;
+        }
+
+
+
+        
+    .contenedor .estructura .exemple8 {
+        grid-column: 6 / -1;
+        grid-row: 3 / 6;
+        
+    }
+
+    .contenedor .estructura .exemple8 .widget-8 img{
+        grid-area: exemple8;
+        grid-column: span 2;
+        max-width: 100%;
+        height: auto;
+        }
+
+
+
+/*definició de la composició del footer de la web*/
+
+    .contenedor .footer {
+        position: relative; 
+        grid-area: footer;
+        margin-bottom: 0%;
+        width: 100%;
+        background: #353535;
+        margin: 0px auto;
+    
+    }
+
+
+    .contenedor .footer .capsa .fila {
+        display: flex;
+        /*flex-wrap: wrap;*/
+    }
+
+    .contenedor .footer .fila .contfooter{
+        width: 33%;
+        padding-top: 2%; 
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .contenedor .footer .fila .contfooter h3{
+        font-size: 1.6em;
+        color: rgb(252, 241, 232);
+        padding-bottom: 5%;
+        position: relative;
+    }
+    .contenedor .footer .fila .contfooter h4{
+        font-size: 0.9em;
+        color: rgb(252, 241, 232);
+        margin-top: 65%;
+        margin-left: 40%;
+        position: relative;
+    }
+
+    .contenedor .footer .fila .contfooter ul li{
+        padding-bottom: 2%;
+        font-size: 1em;
+        color: rgb(230, 221, 214);
+        display: block;
+        /*margin-left: 10rem;*/
+    }
+
+    .contenedor .footer .fila .contfooter ul li a{
+        padding-bottom: 2%;
+        font-size: 1em;
+        color: rgb(230, 221, 214);
+        display: block;
+    }
+
+
+
+   /* media queris per adaptar el contingut a diferents pantalles*/
+
+   /*tablet*/
+
+    @media screen and (max-width: 1500px) {
+       
+        .logo-header img {
+            margin-left: 1rem;
+            width: 2.5rem;
+        }
+        
+        .nav-menu li{
+            margin-right: 3.5rem;
+            font-size: 1rem;
+        }
+        
+        /*portada*/
+        .contenedor .portada .titol {
+            font-size: 1em;
+        }
+        
+        /*lucero*/
+        .contenedor .estructura .lucero{
+            grid-template-areas: "aire          aire        aire        aire          aire          aire       aire"
+                                 "aire          nom         nom         nom           nom           nom        aire"
+                                 "aire          imatge_a    imatge_a    imatge_a      imatge_a      imatge_a   aire"
+                                 "aire          imatge_a    imatge_a    imatge_a      imatge_a      imatge_a   aire"
+                                 "aire          imatge_a    imatge_a    imatge_a      imatge_a      imatge_a   aire"
+                                 "aire          exemple1    exemple1    aire          aire          aire       aire"
+                                 "aire          exemple1    exemple1    aire          exemple2      exemple2   aire"
+                                 "aire          exemple1    exemple1    aire          exemple2      exemple2   aire"
+                                 "aire          aire        aire        aire          exemple2      exemple2   aire";
+        }
+
+        .contenedor .estructura .nom {
+            grid-column: 2 / -2;
+            grid-row: 2 / 3;
+            text-align: center;
+            font-size: 2em;
+            }
+            
+            .contenedor .estructura .contingut-1 {
+            grid-area: imatge_a;
+            grid-column: 2 / 7;
+            grid-row: 3 / 6;
+            max-width: 100%;
+            }
+
+            .contenedor .estructura .contingut-1 figure .capa p{
+                padding-top: 1%;
+                font-size: 0.9em;
+            }
+            
+            
+            .contenedor .estructura .exemple1 {
+            grid-column: 2 / 4;
+            grid-row: 6 / 9;
+            }
+            
+            .contenedor .estructura .exemple1 .widget-1 img{
+                grid-area: exemple1;
+                grid-column: span 2;
+                max-width: 100%;
+                height: auto;
+                }
+            
+             
+                
+            .contenedor .estructura .exemple2 {
+            grid-column: 5 / 7;
+            grid-row: 7 / 13;
+            }
+            
+            .contenedor .estructura .exemple2 .widget-2 img{
+                grid-area: exemple2;
+                grid-column: span 2;
+                width: 100%;
+                height: auto;
+                }
+
+
+
+
+                /*martina*/
+
+                .contenedor .estructura .martina{
+                    display: grid;
+                     grid-template-areas: "aire          aire        aire        aire          aire          aire       aire"
+                                          "aire          nom2        nom2        nom2          nom2          nom2       aire"
+                                          "aire          imatge_b    imatge_b    imatge_b      imatge_b      imatge_b   aire"
+                                          "aire          imatge_b    imatge_b    imatge_b      imatge_b      imatge_b   aire"
+                                          "aire          imatge_b    imatge_b    imatge_b      imatge_b      imatge_b   aire"
+                                          "aire          exemple3    exemple3    aire          aire          aire       aire"
+                                          "aire          exemple3    exemple3    aire          exemple4      exemple4   aire"
+                                          "aire          exemple3    exemple3    aire          exemple4      exemple4   aire"
+                                          "aire          aire        aire        aire          exemple4      exemple4   aire";
+                 }
+         
+                 .contenedor .estructura .nom2 {
+                     grid-column: 2 / -2;
+                     grid-row: 2 / 3;
+                     text-align: center;
+                     font-size: 2em;
+                     }
+                     
+                     .contenedor .estructura .contingut-2 {
+                     grid-area: imatge_b;
+                     grid-column: 2 / 7;
+                     grid-row: 3 / 6;
+                     max-width: 100%;
+                     }
+         
+                     .contenedor .estructura .contingut-2 figure .capa2 p{
+                         padding-top: 1%;
+                         font-size: 0.9em;
+                     }
+                     
+                     
+                     .contenedor .estructura .exemple3 {
+                     grid-column: 2 / 4;
+                     grid-row: 6 / 9;
+                     }
+                     
+                     .contenedor .estructura .exemple3 .widget-3 img{
+                         grid-area: exemple3;
+                         grid-column: span 2;
+                         max-width: 100%;
+                         height: auto;
+                         }
+                     
+                         
+                     .contenedor .estructura .exemple4 {
+                     grid-column: 5 / 7;
+                     grid-row: 7 / 13;
+                     }
+                     
+                     .contenedor .estructura .exemple4 .widget-4 img{
+                         grid-area: exemple4;
+                         grid-column: span 2;
+                         width: 100%;
+                         height: auto;
+                         }
+
+
+
+
+
+
+                         /*megan*/
+
+                                 .contenedor .estructura .megan{
+            grid-template-areas: "aire          aire        aire        aire          aire          aire       aire"
+                                 "aire          nom3        nom3        nom3          nom3          nom3       aire"
+                                 "aire          imatge_c    imatge_c    imatge_c      imatge_c      imatge_c   aire"
+                                 "aire          imatge_c    imatge_c    imatge_c      imatge_c      imatge_c   aire"
+                                 "aire          imatge_c    imatge_c    imatge_c      imatge_c      imatge_c   aire"
+                                 "aire          exemple5    exemple5    aire          aire          aire       aire"
+                                 "aire          exemple5    exemple5    aire          exemple6      exemple6   aire"
+                                 "aire          exemple5    exemple5    aire          exemple6      exemple6   aire"
+                                 "aire          aire        aire        aire          exemple6      exemple6   aire";
+        }
+
+        .contenedor .estructura .nom3 {
+            grid-column: 2 / -2;
+            grid-row: 2 / 3;
+            text-align: center;
+            font-size: 2em;
+            }
+            
+            .contenedor .estructura .contingut-3 {
+            grid-area: imatge_c;
+            grid-column: 2 / 7;
+            grid-row: 3 / 6;
+            max-width: 100%;
+            }
+
+            .contenedor .estructura .contingut-3 figure .capa3 p{
+                padding-top: 1%;
+                font-size: 0.9em;
+            }
+            
+            
+            .contenedor .estructura .exemple5 {
+            grid-column: 2 / 4;
+            grid-row: 6 / 9;
+            }
+            
+            .contenedor .estructura .exemple5 .widget-5 img{
+                grid-area: exemple5;
+                grid-column: span 2;
+                max-width: 100%;
+                height: auto;
+                }
+            
+             
+                
+            .contenedor .estructura .exemple6 {
+            grid-column: 5 / 7;
+            grid-row: 7 / 13;
+            }
+            
+            .contenedor .estructura .exemple6 .widget-6 img{
+                grid-area: exemple6;
+                grid-column: span 2;
+                width: 100%;
+                height: auto;
+                }
+
+
+                /*prin*/
+
+
+                    .contenedor .estructura .prin{
+            grid-template-areas: "aire          aire        aire        aire          aire          aire       aire"
+                                 "aire          nom4        nom4        nom4          nom4          nom4       aire"
+                                 "aire          imatge_d    imatge_d    imatge_d      imatge_d      imatge_d   aire"
+                                 "aire          imatge_d    imatge_d    imatge_d      imatge_d      imatge_d   aire"
+                                 "aire          imatge_d    imatge_d    imatge_d      imatge_d      imatge_d   aire"
+                                 "aire          exemple7    exemple7    aire          aire          aire       aire"
+                                 "aire          exemple7    exemple7    aire          exemple8      exemple8   aire"
+                                 "aire          exemple7    exemple7    aire          exemple8      exemple8   aire"
+                                 "aire          aire        aire        aire          exemple8      exemple8   aire";
+        }
+
+        .contenedor .estructura .nom4 {
+            grid-column: 2 / -2;
+            grid-row: 2 / 3;
+            text-align: center;
+            font-size: 2em;
+            }
+            
+            .contenedor .estructura .contingut-4 {
+            grid-area: imatge_d;
+            grid-column: 2 / 7;
+            grid-row: 3 / 6;
+            max-width: 100%;
+            }
+
+            .contenedor .estructura .contingut-4 figure .capa4 p{
+                padding-top: 1%;
+                font-size: 0.9em;
+            }
+            
+            
+            .contenedor .estructura .exemple7 {
+            grid-column: 2 / 4;
+            grid-row: 6 / 9;
+            }
+            
+            .contenedor .estructura .exemple7 .widget-7 img{
+                grid-area: exemple7;
+                grid-column: span 2;
+                max-width: 100%;
+                height: auto;
+                }
+            
+             
+                
+            .contenedor .estructura .exemple8 {
+            grid-column: 5 / 7;
+            grid-row: 7 / 13;
+            }
+            
+            .contenedor .estructura .exemple8 .widget-8 img{
+                grid-area: exemple8;
+                grid-column: span 2;
+                width: 100%;
+                height: auto;
+                }
+
+
+
+
+                /*footer*/
+
+                .contenedor .footer {
+                    height: 150px;
+                }
+                .contenedor .footer .fila .contfooter h3{
+                    font-size: 1em;
+                }
+                .contenedor .footer .fila .contfooter h4{
+                    font-size: 0.6em;
+                }
+            
+                .contenedor .footer .fila .contfooter ul li{
+                    font-size: 0.7em;
+                }
+            
+
+
+    }
+
+
+    /*mòbil*/
+
+    @media screen and (max-width: 720px) {
+       
+        /*portada*/
+
+        .contenedor .portada .titol {
+            font-size: 0.7em;
+            grid-column: 5 / 8;
+            grid-row: 2 / 4;
+            margin: 0px auto;
+            padding-top: 0%;
+            text-align: left;
+        }
+
+        .contenedor .portada {
+            grid-template-areas: "aire      aire         aire        aire        aire        aire        aire"
+                                 "aire      imatge1      imatge1     imatge1     titol       titol       aire"
+                                 "aire      imatge1      imatge1     imatge1     titol       titol       aire"
+                                 "aire      imatge1      imatge1     imatge1     imatge2     imatge2     imatge2"
+                                 "aire      imatge3      imatge3     imatge3     imatge2     imatge2     imatge2"
+                                 "aire      imatge3      imatge3     imatge3     imatge2     imatge2     imatge2"
+                                 "aire      imatge3      imatge3     imatge3     imatge4     imatge4     imatge4"
+                                 "aire      aire         aire        aire        imatge4     imatge4     imatge4"
+                                 "aire      aire         aire        aire        imatge4     imatge4     imatge4" ;
+        }
+
+
+        .contenedor .portada .imatge1{
+            grid-column: 2 / 5;
+            grid-row: 2 / 5;
+        }
+    
+        .contenedor .portada .imatge2{
+            grid-column: 5 / 8;
+            grid-row: 4 / 7;
+        }
+        
+        .contenedor .portada .imatge3{
+            grid-column: 2 / 5;
+            grid-row: 5 / 8;
+        }
+        
+        .contenedor .portada .imatge4{
+            grid-column: 5 / 8;
+            grid-row: 7 / 10;
+        }
+
+
+
+        /*header*/
+        .logo-header img {
+            margin-left: 1rem;
+            width: 1.5rem;
+        }
+        
+        .nav-menu li{
+            margin-right: 2.5rem;
+            font-size: 0.7rem;
+        }
+        
+        
+        
+        /*lucero*/
+        .contenedor .estructura .lucero{
+            grid-template-areas: "aire          aire        aire        aire          aire          aire       aire"
+                                 "aire          nom         nom         nom           nom           nom        aire"
+                                 "aire          imatge_a    imatge_a    imatge_a      imatge_a      imatge_a   aire"
+                                 "aire          imatge_a    imatge_a    imatge_a      imatge_a      imatge_a   aire"
+                                 "aire          imatge_a    imatge_a    imatge_a      imatge_a      imatge_a   aire"
+                                 "aire          exemple1    exemple1    exemple1      exemple1      exemple1   aire"
+                                 "aire          exemple1    exemple1    exemple1      exemple1      exemple1   aire"
+                                 "aire          exemple2    exemple2    exemple2      exemple2      exemple2   aire"
+                                 "aire          exemple2    exemple2    exemple2       exemple2     exemple2   aire";
+        }
+
+        .contenedor .estructura .nom {
+            grid-column: 2 / -2;
+            grid-row: 2 / 3;
+            text-align: center;
+            font-size: 1.5em;
+            }
+            
+            .contenedor .estructura .contingut-1 {
+            grid-area: imatge_a;
+            grid-column: 2 / 7;
+            grid-row: 3 / 6;
+            max-width: 100%;
+            }
+
+            .contenedor .estructura .contingut-1 figure .capa p{
+                padding-top: 1%;
+                font-size: 0.55em;
+            }
+            
+            
+            .contenedor .estructura .exemple1 {
+            grid-column: 2 / -2;
+            grid-row: 6 / 8;
+            }
+            
+            .contenedor .estructura .exemple1 .widget-1 img{
+                grid-area: exemple1;
+                grid-column: span 2;
+                max-width: 100%;
+                height: auto;
+                }
+            
+             
+                
+            .contenedor .estructura .exemple2 {
+            grid-column: 2 / -2;
+            grid-row: 8 / 10;
+            }
+            
+            .contenedor .estructura .exemple2 .widget-2 img{
+                grid-area: exemple2;
+                grid-column: span 2;
+                width: 100%;
+                height: auto;
+                }
+
+
+
+
+                /*martina*/
+
+                .contenedor .estructura .martina{
+                     grid-template-areas: "aire          aire        aire        aire          aire          aire       aire"
+                                          "aire          nom2        nom2        nom2          nom2          nom2       aire"
+                                          "aire          imatge_b    imatge_b    imatge_b      imatge_b      imatge_b   aire"
+                                          "aire          imatge_b    imatge_b    imatge_b      imatge_b      imatge_b   aire"
+                                          "aire          imatge_b    imatge_b    imatge_b      imatge_b      imatge_b   aire"
+                                          "aire          exemple3    exemple3    exemple3      exemple3      exemple3   aire"
+                                          "aire          exemple3    exemple3    exemple3      exemple3      exemple3   aire"
+                                          "aire          exemple4    exemple4    exemple4      exemple4      exemple4   aire"
+                                          "aire          exemple4    exemple4    exemple4      exemple4      exemple4   aire";
+                 }
+         
+                 .contenedor .estructura .nom2 {
+                    grid-column: 2 / -2;
+                    grid-row: 2 / 3;
+                    text-align: center;
+                    font-size: 1.5em;
+                     }
+                     
+                     .contenedor .estructura .contingut-2 {
+                     grid-area: imatge_b;
+                     grid-column: 2 / 7;
+                     grid-row: 3 / 6;
+                     max-width: 100%;;
+                     }
+         
+                     .contenedor .estructura .contingut-2 figure .capa2 p{
+                        padding-top: 1%;
+                        font-size: 0.52em;
+                     }
+                     
+                     
+                     .contenedor .estructura .exemple3 {
+                        grid-column: 2 / -2;
+                        grid-row: 6 / 8;
+                     }
+                     
+                     .contenedor .estructura .exemple3 .widget-3 img{
+                         grid-area: exemple3;
+                         grid-column: span 2;
+                         max-width: 100%;
+                         height: auto;
+                         }
+                     
+                         
+                     .contenedor .estructura .exemple4 {
+                        grid-column: 2 / -2;
+                        grid-row: 8 / 10;
+                     }
+                     
+                     .contenedor .estructura .exemple4 .widget-4 img{
+                         grid-area: exemple4;
+                         grid-column: span 2;
+                         width: 100%;
+                         height: auto;
+                         }
+
+
+
+
+
+
+                         /*megan*/
+
+                                 .contenedor .estructura .megan{
+            grid-template-areas: "aire          aire        aire        aire          aire          aire       aire"
+                                 "aire          nom3        nom3        nom3          nom3          nom3       aire"
+                                 "aire          imatge_c    imatge_c    imatge_c      imatge_c      imatge_c   aire"
+                                 "aire          imatge_c    imatge_c    imatge_c      imatge_c      imatge_c   aire"
+                                 "aire          imatge_c    imatge_c    imatge_c      imatge_c      imatge_c   aire"
+                                 "aire          exemple5    exemple5    exemple5      exemple5      exemple5   aire"
+                                 "aire          exemple5    exemple5    exemple5      exemple5      exemple5   aire"
+                                 "aire          exemple6    exemple6    exemple6      exemple6      exemple6   aire"
+                                 "aire          exemple6    exemple6    exemple6      exemple6      exemple6   aire";
+        }
+
+        .contenedor .estructura .nom3 {
+            grid-column: 2 / -2;
+            grid-row: 2 / 3;
+            text-align: center;
+            font-size: 1.5em;
+            }
+            
+            .contenedor .estructura .contingut-3 {
+            grid-area: imatge_c;
+            grid-column: 2 / 7;
+            grid-row: 3 / 6;
+            max-width: 100%;;
+            }
+
+            .contenedor .estructura .contingut-3 figure .capa3 p{
+                padding-top: 1%;
+                font-size: 0.55em;
+            }
+            
+            
+            .contenedor .estructura .exemple5 {
+                grid-column: 2 / -2;
+                grid-row: 6 / 8;
+            }
+            
+            .contenedor .estructura .exemple5 .widget-5 img{
+                grid-area: exemple5;
+                grid-column: span 2;
+                max-width: 100%;
+                height: auto;
+                }
+            
+             
+                
+            .contenedor .estructura .exemple6 {
+                grid-column: 2 / -2;
+                grid-row: 8 / 10;
+            }
+            
+            .contenedor .estructura .exemple6 .widget-6 img{
+                grid-area: exemple6;
+                grid-column: span 2;
+                width: 100%;
+                height: auto;
+                }
+
+
+                /*prin*/
+
+
+                    .contenedor .estructura .prin{
+            grid-template-areas: "aire          aire        aire        aire          aire          aire       aire"
+                                 "aire          nom4        nom4        nom4          nom4          nom4       aire"
+                                 "aire          imatge_d    imatge_d    imatge_d      imatge_d      imatge_d   aire"
+                                 "aire          imatge_d    imatge_d    imatge_d      imatge_d      imatge_d   aire"
+                                 "aire          imatge_d    imatge_d    imatge_d      imatge_d      imatge_d   aire"
+                                 "aire          exemple7    exemple7    exemple7      exemple7      exemple7   aire"
+                                 "aire          exemple7    exemple7    exemple7      exemple7      exemple7   aire"
+                                 "aire          exemple8    exemple8    exemple8      exemple8      exemple8   aire"
+                                 "aire          exemple8    exemple8    exemple8      exemple8      exemple8   aire";
+        }
+
+        .contenedor .estructura .nom4 {
+            grid-column: 2 / -2;
+            grid-row: 2 / 3;
+            text-align: center;
+            font-size: 1.5em;
+            }
+            
+            .contenedor .estructura .contingut-4 {
+            grid-area: imatge_d;
+            grid-column: 2 / 7;
+            grid-row: 3 / 6;
+            max-width: 100%;;
+            }
+
+            .contenedor .estructura .contingut-4 figure .capa4 p{
+                padding-top: 1%;
+                font-size: 0.55em;
+            }
+            
+            
+            .contenedor .estructura .exemple7 {
+                grid-column: 2 / -2;
+                grid-row: 6 / 8;
+            }
+            
+            .contenedor .estructura .exemple7 .widget-7 img{
+                grid-area: exemple7;
+                grid-column: span 2;
+                max-width: 100%;
+                height: auto;
+                }
+            
+             
+                
+            .contenedor .estructura .exemple8 {
+                grid-column: 2 / -2;
+                grid-row: 8 / 10;
+            }
+            
+            .contenedor .estructura .exemple8 .widget-8 img{
+                grid-area: exemple8;
+                grid-column: span 2;
+                width: 100%;
+                height: auto;
+                }
+
+
+
+
+                /*footer*/
+
+                .contenedor .footer {
+                    height: 100px;
+                }
+                .contenedor .footer .fila .contfooter h3{
+                    font-size: 0.6em;
+                }
+                .contenedor .footer .fila .contfooter h4{
+                    font-size: 0.5em;
+                }
+            
+                .contenedor .footer .fila .contfooter ul li{
+                    font-size: 0.5em;
+                }
+            
+
+
+    }
